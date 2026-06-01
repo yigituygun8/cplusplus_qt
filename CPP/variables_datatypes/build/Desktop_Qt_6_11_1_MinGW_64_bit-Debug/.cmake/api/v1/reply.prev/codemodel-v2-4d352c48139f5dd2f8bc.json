@@ -1,0 +1,61 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-a018477a651678c3bfe5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "variables_datatypes",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "variables_datatypes::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-variables_datatypes-Debug-eac07a6358f14e3b6f74.json",
+					"name" : "variables_datatypes",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/leyla/OneDrive/Masa\u00fcst\u00fc/Best Staj/CPP/variables_datatypes/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug",
+		"source" : "C:/Users/leyla/OneDrive/Masa\u00fcst\u00fc/Best Staj/CPP/variables_datatypes"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

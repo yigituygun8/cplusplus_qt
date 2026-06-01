@@ -1,0 +1,61 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-001b5d2c2767334025aa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "userInput_mathRelatedFuncs",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "userInput_mathRelatedFuncs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-userInput_mathRelatedFuncs-Debug-656c70f4ea412924118b.json",
+					"name" : "userInput_mathRelatedFuncs",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/leyla/OneDrive/Masa\u00fcst\u00fc/Best Staj/CPP/userInput_mathRelatedFuncs/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug",
+		"source" : "C:/Users/leyla/OneDrive/Masa\u00fcst\u00fc/Best Staj/CPP/userInput_mathRelatedFuncs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

@@ -1,0 +1,18 @@
+WHY LEARN C++ ?:
+
+- Versatile: 
+	system programming: develop system software, used for operating computer hardware whereas application software is used according to user applications
+	game development: unreal engine
+	embedded systems: c++ is close to hardware
+	scientific computing: complex mathematical problems
+- Performance: close to hardware, low level memory manipulation, high performance, suitable for resource-intensive tasks
+- OOP: modular, maintainable, reusable code
+- Compatibility
+- Standard Library: a collection of classes and functions that provide a standardized foundation for writing portable and efficient C++ code. It includes everything 			from basic input/output to complex data structures and algorithms. Most of its components are defined within the std namespace
+
+Compiler: system tool that translate human-readable code written in a programming language into machine code that can be directly executed by the computer hardware.
+
+C++ is a compiled language. 
+
+Interpreter will run through a program line by line and execute each command, a bit slower. (Python)
+Compiler will convert whole code directly into machine code that the processor can execute, faster.

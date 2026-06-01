@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-6161600dc14abdae9cc6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "HelloToQT",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "HelloToQT::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HelloToQT-Debug-db8a7a9512e24a7fde40.json",
+					"name" : "HelloToQT",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "HelloToQT_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HelloToQT_autogen-Debug-6382718ecabca2125534.json",
+					"name" : "HelloToQT_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "HelloToQT_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HelloToQT_autogen_timestamp_deps-Debug-cee35d32bed59af61976.json",
+					"name" : "HelloToQT_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/leyla/OneDrive/Masa\u00fcst\u00fc/Best Staj/QT Creator/HelloToQT/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug",
+		"source" : "C:/Users/leyla/OneDrive/Masa\u00fcst\u00fc/Best Staj/QT Creator/HelloToQT"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

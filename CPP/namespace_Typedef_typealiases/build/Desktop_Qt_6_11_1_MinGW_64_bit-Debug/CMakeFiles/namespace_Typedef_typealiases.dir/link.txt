@@ -1,0 +1,3 @@
+C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\namespace_Typedef_typealiases.dir/objects.a
+C:\Qt\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\namespace_Typedef_typealiases.dir/objects.a @CMakeFiles\namespace_Typedef_typealiases.dir\objects1.rsp
+C:\Qt\Tools\mingw1310_64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\namespace_Typedef_typealiases.dir/objects.a -Wl,--no-whole-archive -o namespace_Typedef_typealiases.exe -Wl,--out-implib,libnamespace_Typedef_typealiases.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\namespace_Typedef_typealiases.dir\linkLibs.rsp
