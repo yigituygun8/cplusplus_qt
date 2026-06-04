@@ -42,3 +42,57 @@ Hazır fonksiyonlarla işinizi kolaylaştıran kütüphanelerdir.
 Programın çalışma süresini ölçmek veya modern C++ özelliklerini kullanmak için gereklidir.
 #include <chrono>: Kodun ne kadar sürede çalıştığını mikrosaniye veya milisaniye cinsinden ölçmek için kullanılır.
 #include <memory>: Bellek sızıntılarını (memory leak) önleyen akıllı işaretçileri (unique_ptr, shared_ptr) kullanmanızı sağlar.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Pointers Vs Smart Pointers
+Pointer	                                                                        Smart Pointer
+A pointer is a variable that stores the memory address of another variable.	A smart pointer is a class that manages a pointer automatically.
+Memory must be manually managed (using new/delete).	                        Memory is automatically managed and released when no longer needed.
+Does not automatically free memory when it goes out of scope.	                Automatically frees memory when it goes out of scope.
+Requires careful handling, increasing chances of errors (e.g., memory leaks).	Safer to use, as it reduces risks like memory leaks and dangling pointers.
+
+
+### **1. The `std::unique_ptr` Methods**
+
+These are the core methods you will use to manage exclusive ownership of memory.
+
+* **`get()`**
+* **What it does:** Returns the "raw" pointer (e.g., `int*`) that the `unique_ptr` is hiding inside.
+* **When to use it:** You use this when you need to pass your pointer to a legacy function or an API that doesn't understand smart pointers. For example, if an older C-style library requires `void processData(int* data)`, you would call `processData(uniquePtr1.get())`.
+* **Warning:** Never call `delete` on the raw pointer returned by `get()`. The `unique_ptr` still owns it and will try to delete it later, causing a crash.
+
+
+* **`reset()`**
+* **What it does:** Destroys the current object being managed (if any) and optionally takes ownership of a new raw pointer.
+* **When to use it:** When you want to repurpose an existing `unique_ptr`.
+* `uniquePtr1.reset();` // Deletes the current integer and sets the pointer to null.
+* `uniquePtr1.reset(new int(50));` // Deletes the old integer (10), and takes ownership of a new integer (50).
+
+* **`swap()`**
+* **What it does:** Exchanges the managed pointers between two `unique_ptr` objects.
+* **When to use it:** When you need to trade ownership without destroying the underlying objects. `uniquePtr1.swap(uniquePtr2);` means `uniquePtr1` now holds what `uniquePtr2` used to hold, and vice versa.
+
+---
+
+### **2. The `std::shared_ptr` Methods**
+
+A `std::shared_ptr` allows *multiple* smart pointers to safely share ownership of the exact same piece of memory. The memory is only deleted when the very last `shared_ptr` pointing to it goes out of scope. These methods are designed to manage that shared state.
+
+* **`use_count()`**
+* **What it does:** Returns the number of `shared_ptr` instances that currently own the memory.
+* **When to use it:** Primarily used for debugging. If `use_count()` returns `3`, it means three separate smart pointers are keeping that memory alive.
+
+
+* **`unique()`**
+* **What it does:** Returns `true` if `use_count() == 1` (meaning this is the only smart pointer managing that memory).
+* **When to use it:** **You shouldn't.** In fact, this method was officially deprecated in C++17 and completely removed in C++20. It was notorious for causing bugs in multithreaded programs because by the time the function returned `true`, another thread might have already created a copy, making it instantly false.
+
+
+* **`owner_before()`**
+* **What it does:** Provides a strict, memory-safe way to sort smart pointers.
+* **When to use it:** This is a highly advanced feature. If you are storing `shared_ptr` objects inside a sorted data structure (like `std::map` or `std::set`), the container needs a way to know which pointer goes "before" the other. `owner_before()` ensures they are sorted by their internal control block rather than their raw memory addresses, which prevents subtle bugs in complex class hierarchies.
+
+
+
+
+
