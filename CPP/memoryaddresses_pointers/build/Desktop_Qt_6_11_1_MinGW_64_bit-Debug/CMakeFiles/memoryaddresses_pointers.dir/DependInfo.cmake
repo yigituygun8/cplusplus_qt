@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/USER/Desktop/BEST STAJ/cplusplus_qt/CPP/memoryaddresses_pointers/main.cpp" "CMakeFiles/memoryaddresses_pointers.dir/main.cpp.obj" "gcc" "CMakeFiles/memoryaddresses_pointers.dir/main.cpp.obj.d"
+  "C:/Users/leyla/OneDrive/Masaüstü/Best Staj/cplusplus_qt/CPP/memoryaddresses_pointers/main.cpp" "CMakeFiles/memoryaddresses_pointers.dir/main.cpp.obj" "gcc" "CMakeFiles/memoryaddresses_pointers.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

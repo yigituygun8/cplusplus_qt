@@ -1,7 +1,7 @@
-C:/Users/USER/Desktop/BEST STAJ/cplusplus_qt/CPP/memoryaddresses_pointers/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/memoryaddresses_pointers.dir
-C:/Users/USER/Desktop/BEST STAJ/cplusplus_qt/CPP/memoryaddresses_pointers/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
-C:/Users/USER/Desktop/BEST STAJ/cplusplus_qt/CPP/memoryaddresses_pointers/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
-C:/Users/USER/Desktop/BEST STAJ/cplusplus_qt/CPP/memoryaddresses_pointers/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
-C:/Users/USER/Desktop/BEST STAJ/cplusplus_qt/CPP/memoryaddresses_pointers/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/install.dir
-C:/Users/USER/Desktop/BEST STAJ/cplusplus_qt/CPP/memoryaddresses_pointers/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
-C:/Users/USER/Desktop/BEST STAJ/cplusplus_qt/CPP/memoryaddresses_pointers/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+C:/Users/leyla/OneDrive/Masaüstü/Best Staj/cplusplus_qt/CPP/memoryaddresses_pointers/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/memoryaddresses_pointers.dir
+C:/Users/leyla/OneDrive/Masaüstü/Best Staj/cplusplus_qt/CPP/memoryaddresses_pointers/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/leyla/OneDrive/Masaüstü/Best Staj/cplusplus_qt/CPP/memoryaddresses_pointers/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/leyla/OneDrive/Masaüstü/Best Staj/cplusplus_qt/CPP/memoryaddresses_pointers/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+C:/Users/leyla/OneDrive/Masaüstü/Best Staj/cplusplus_qt/CPP/memoryaddresses_pointers/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/install.dir
+C:/Users/leyla/OneDrive/Masaüstü/Best Staj/cplusplus_qt/CPP/memoryaddresses_pointers/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+C:/Users/leyla/OneDrive/Masaüstü/Best Staj/cplusplus_qt/CPP/memoryaddresses_pointers/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir

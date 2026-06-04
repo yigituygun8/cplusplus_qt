@@ -52,10 +52,10 @@ RM = C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\USER\Desktop\BEST STAJ\cplusplus_qt\CPP\memoryaddresses_pointers"
+CMAKE_SOURCE_DIR = "C:\Users\leyla\OneDrive\Masaüstü\Best Staj\cplusplus_qt\CPP\memoryaddresses_pointers"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\USER\Desktop\BEST STAJ\cplusplus_qt\CPP\memoryaddresses_pointers\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug"
+CMAKE_BINARY_DIR = "C:\Users\leyla\OneDrive\Masaüstü\Best Staj\cplusplus_qt\CPP\memoryaddresses_pointers\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/memoryaddresses_pointers.dir/depend.make
@@ -69,18 +69,18 @@ include CMakeFiles/memoryaddresses_pointers.dir/progress.make
 include CMakeFiles/memoryaddresses_pointers.dir/flags.make
 
 CMakeFiles/memoryaddresses_pointers.dir/main.cpp.obj: CMakeFiles/memoryaddresses_pointers.dir/flags.make
-CMakeFiles/memoryaddresses_pointers.dir/main.cpp.obj: C:/Users/USER/Desktop/BEST\ STAJ/cplusplus_qt/CPP/memoryaddresses_pointers/main.cpp
+CMakeFiles/memoryaddresses_pointers.dir/main.cpp.obj: C:/Users/leyla/OneDrive/Masaüstü/Best\ Staj/cplusplus_qt/CPP/memoryaddresses_pointers/main.cpp
 CMakeFiles/memoryaddresses_pointers.dir/main.cpp.obj: CMakeFiles/memoryaddresses_pointers.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\USER\Desktop\BEST STAJ\cplusplus_qt\CPP\memoryaddresses_pointers\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/memoryaddresses_pointers.dir/main.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/memoryaddresses_pointers.dir/main.cpp.obj -MF CMakeFiles\memoryaddresses_pointers.dir\main.cpp.obj.d -o CMakeFiles\memoryaddresses_pointers.dir\main.cpp.obj -c "C:\Users\USER\Desktop\BEST STAJ\cplusplus_qt\CPP\memoryaddresses_pointers\main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\leyla\OneDrive\Masaüstü\Best Staj\cplusplus_qt\CPP\memoryaddresses_pointers\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/memoryaddresses_pointers.dir/main.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/memoryaddresses_pointers.dir/main.cpp.obj -MF CMakeFiles\memoryaddresses_pointers.dir\main.cpp.obj.d -o CMakeFiles\memoryaddresses_pointers.dir\main.cpp.obj -c "C:\Users\leyla\OneDrive\Masaüstü\Best Staj\cplusplus_qt\CPP\memoryaddresses_pointers\main.cpp"
 
 CMakeFiles/memoryaddresses_pointers.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/memoryaddresses_pointers.dir/main.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\USER\Desktop\BEST STAJ\cplusplus_qt\CPP\memoryaddresses_pointers\main.cpp" > CMakeFiles\memoryaddresses_pointers.dir\main.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\leyla\OneDrive\Masaüstü\Best Staj\cplusplus_qt\CPP\memoryaddresses_pointers\main.cpp" > CMakeFiles\memoryaddresses_pointers.dir\main.cpp.i
 
 CMakeFiles/memoryaddresses_pointers.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/memoryaddresses_pointers.dir/main.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\USER\Desktop\BEST STAJ\cplusplus_qt\CPP\memoryaddresses_pointers\main.cpp" -o CMakeFiles\memoryaddresses_pointers.dir\main.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\leyla\OneDrive\Masaüstü\Best Staj\cplusplus_qt\CPP\memoryaddresses_pointers\main.cpp" -o CMakeFiles\memoryaddresses_pointers.dir\main.cpp.s
 
 # Object files for target memoryaddresses_pointers
 memoryaddresses_pointers_OBJECTS = \
@@ -94,7 +94,7 @@ memoryaddresses_pointers.exe: CMakeFiles/memoryaddresses_pointers.dir/build.make
 memoryaddresses_pointers.exe: CMakeFiles/memoryaddresses_pointers.dir/linkLibs.rsp
 memoryaddresses_pointers.exe: CMakeFiles/memoryaddresses_pointers.dir/objects1.rsp
 memoryaddresses_pointers.exe: CMakeFiles/memoryaddresses_pointers.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\USER\Desktop\BEST STAJ\cplusplus_qt\CPP\memoryaddresses_pointers\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable memoryaddresses_pointers.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\leyla\OneDrive\Masaüstü\Best Staj\cplusplus_qt\CPP\memoryaddresses_pointers\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable memoryaddresses_pointers.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\memoryaddresses_pointers.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -106,6 +106,6 @@ CMakeFiles/memoryaddresses_pointers.dir/clean:
 .PHONY : CMakeFiles/memoryaddresses_pointers.dir/clean
 
 CMakeFiles/memoryaddresses_pointers.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\USER\Desktop\BEST STAJ\cplusplus_qt\CPP\memoryaddresses_pointers" "C:\Users\USER\Desktop\BEST STAJ\cplusplus_qt\CPP\memoryaddresses_pointers" "C:\Users\USER\Desktop\BEST STAJ\cplusplus_qt\CPP\memoryaddresses_pointers\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug" "C:\Users\USER\Desktop\BEST STAJ\cplusplus_qt\CPP\memoryaddresses_pointers\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug" "C:\Users\USER\Desktop\BEST STAJ\cplusplus_qt\CPP\memoryaddresses_pointers\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles\memoryaddresses_pointers.dir\DependInfo.cmake" "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\leyla\OneDrive\Masaüstü\Best Staj\cplusplus_qt\CPP\memoryaddresses_pointers" "C:\Users\leyla\OneDrive\Masaüstü\Best Staj\cplusplus_qt\CPP\memoryaddresses_pointers" "C:\Users\leyla\OneDrive\Masaüstü\Best Staj\cplusplus_qt\CPP\memoryaddresses_pointers\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug" "C:\Users\leyla\OneDrive\Masaüstü\Best Staj\cplusplus_qt\CPP\memoryaddresses_pointers\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug" "C:\Users\leyla\OneDrive\Masaüstü\Best Staj\cplusplus_qt\CPP\memoryaddresses_pointers\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles\memoryaddresses_pointers.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/memoryaddresses_pointers.dir/depend
 

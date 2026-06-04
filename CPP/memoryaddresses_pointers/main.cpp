@@ -1,5 +1,7 @@
 #include <iostream>
-#include <functional>
+#include <functional> // for std::function
+#include <memory> // for std::unique_ptr, std::shared_ptr, std::weak_ptr
+#include <utility> // for std::move
 
 using namespace std;
 
@@ -84,12 +86,12 @@ int main()
         - Not a separate "type" but a critical concept. It's one of the most common bugs in C++. Smart pointers exist specifically to eliminate this problem.
     */
 
-    // Null Pointer
+    // NULL POINTER
     int *nullPtrEx = nullptr; // Modern C++
     int *oldNullPtr = NULL; // Old C, avoid because NULL is typically defined as 0, which can lead to confusion when used in pointer contexts.
     // Dereferencing a null pointer -> undefined behavior, crash
 
-    // Void Pointer
+    // VOID POINTER
     int num1 = 42;
     void *voidPtr = &num1; // void pointer can point to any type of data
 
@@ -98,7 +100,7 @@ int main()
     cout << "Value of x through void pointer: " << *(static_cast<int*>(voidPtr)) << endl; // Need to cast void pointer to the correct type before dereferencing
     // However, using void pointers can be dangerous because they do not have type information, so template functions or smart pointers are often preferred for type safety and better code readability.
 
-    // Function Pointer
+    // FUNCTION POINTER
     int (*funcPtr)(int, int) = &add; // Function pointer declaration and initialization. It points to the add function which takes two integers and returns an integer.
     int result = funcPtr(5, 7); // Calling the function through the function pointer. This will call the add function with arguments 5 and 7, and store the result in the variable result.
     cout << result << endl;
@@ -119,18 +121,71 @@ int main()
     funcWrapper = [](int a, int b) { return a * b; }; // you can assign lambdas to std::function as well, allowing for inline function definitions without needing a separate named function.
     cout << funcWrapper(5, 7) << endl;
 
-    // Smart Pointer: we will come to this
+    /*
+    SMART POINTERS: wraps raw pointers and provides automatic memory management.
+    Proper resource deallocation is crucial in C++ to prevent memory leaks and ensure efficient use of memory. Smart pointers are a powerful tool for managing resources safely and effectively, as they automatically handle the deallocation of memory when it is no longer needed, reducing the risk of memory leaks and dangling pointers.
 
-    // Dangling Pointer:
+    Defined in the <memory> header and types are:
+    1) std::unique_ptr: A smart pointer that owns a resource exclusively. It cannot be copied, only moved. When the unique_ptr goes out of scope, it automatically deletes the resource it owns.
+    2) std::shared_ptr: A smart pointer that allows multiple pointers to share ownership of a resource. It keeps track of the number of shared_ptr instances that point to the same resource. When the last shared_ptr pointing to a resource is destroyed, the resource is automatically deleted.
+    3) std::weak_ptr: A smart pointer that holds a non-owning reference to a resource managed by a shared_ptr. It is used to break circular references that can occur with shared_ptr. A weak_ptr does not contribute to the reference count of the resource, and it can be used to check if the resource still exists before accessing it.
+    */
+
+    // only one unique_ptr can own an object at a time. We cannot copy unique_ptr, only transfer ownership of the object to another unique_ptr using the move() method
+
+    std::unique_ptr<int> uniquePtr1 = std::make_unique<int>(10);
+
+    // or std::unique_ptr<int> uniquePtr1(new int(10)); // This is also valid but using make_unique is generally recommended for better safety and readability.
+
+    cout << "Value of uniquePtr1: " << *uniquePtr1 << endl; // Output: 10
+     // std::unique_ptr<int> uniquePtr2 = uniquePtr1; // This will cause a compile-time error because unique_ptr cannot be copied. Instead, we move ownership:
+    auto uniquePtr2 = std::move(uniquePtr1); // Transfer ownership from uniquePtr1 to uniquePtr2
+
+    cout << "Value of uniquePtr2: " << *uniquePtr2 << endl; // Output: 10
+
+    // IMPORTANT: uniquePtr1 is now empty (nullptr) after the move, so we should not dereference it
+    if(uniquePtr1 == nullptr) {
+         cout << "uniquePtr1 is now empty (nullptr) after the move." << endl;
+    }
+
+    uniquePtr2.reset(new int(50)); // Reset uniquePtr2 to point to a new integer with value 50. The old integer (10) will be automatically deleted.
+    cout << "New value of uniquePtr2: " << *uniquePtr2 << endl; // Output: 50
+
+    unique_ptr<int> uniquePtr3 = make_unique<int>(60);
+    uniquePtr2.swap(uniquePtr3); // Swap the pointers. uniquePtr2 now points to 60 and uniquePtr3 points to 50. O(1) operation, no copying of the underlying integer values.
+    cout << "Value of uniquePtr2 after swap: " << *uniquePtr2 << endl; // Output: 60
+    cout << "Value of uniquePtr3 after swap: " << *uniquePtr3 << "\n" << endl; // Output: 50
+
+    // shared_ptr allows multiple pointers to share ownership of the same object. It uses reference counting to manage memory.
+    shared_ptr<int> sharedPtr1 = make_shared<int>(20);
+    auto sharedPtr2 = sharedPtr1; // sharedPtr2 now shares ownership of same object as sharedPtr1
+
+    cout << "Value of sharedPtr1: " << *sharedPtr1 << endl; // Output: 20
+    cout << "Value of sharedPtr2: " << *sharedPtr2 << endl; // Output: 20
+    cout << "Reference Count: " << sharedPtr1.use_count() << endl << endl; // Output: 2
+
+    // weak_ptr does not own the resource and does not affect the reference count. It can be used to check if the resource still exists before accessing it. Prevents circular dependency. Must be converted to shared_ptr before use using .lock() method.
+    shared_ptr<int> sharedPtr3 = make_shared<int>(30);
+    weak_ptr<int> weakPtr = sharedPtr3; // weakPtr now holds a non-owning reference to the same object as sharedPtr3
+    cout << "Value of sharedPtr3: " << *sharedPtr3 << endl; // Output: 30
+    cout << "Reference Count before reset: " << sharedPtr3.use_count() << endl; // Output: 1 because weak_ptr does not contribute to reference count
+    sharedPtr3.reset(); // Reset sharedPtr3, which will delete the object since it was the only owner
+    cout << "Reference Count after reset: " << sharedPtr3.use_count() << endl; // Output: 0
+
+    auto lockedPtr = weakPtr.lock(); // if the resource still exists, lock() returns a shared_ptr to the resource; otherwise, it returns an empty shared_ptr (nullptr).
+    if(lockedPtr) {
+        cout << "Resource still exists: " << *lockedPtr << endl;
+    } else {
+        cout << "Resource has been deleted." << endl << endl;
+    }
+
+    // DANGLING POINTER
     int *dangPtr = new int(5); // dynamically allocate an integer and assign its address to dangPtr
     cout << "dangPtr points to: " << *dangPtr << endl; // Output: 5
     delete dangPtr; // deallocate the memory that dangPtr points to
     // Now dangPtr is a dangling pointer because it still points to the memory location that has been deallocated.
     cout << *dangPtr << endl; // Accessing a dangling pointer results in undefined behavior. This may print garbage value, cause a crash, or even seem to work correctly in some cases, which is why it's important to avoid using dangling pointers.
     dangPtr = nullptr; // To prevent accidental use of the dangling pointer, it's a good practice to set it to nullptr after deleting the memory it points to.
-
-
-
 
     return 0;
 }
