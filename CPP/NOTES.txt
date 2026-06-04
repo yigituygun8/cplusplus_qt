@@ -16,3 +16,29 @@ C++ is a compiled language.
 
 Interpreter will run through a program line by line and execute each command, a bit slower. (Python)
 Compiler will convert whole code directly into machine code that the processor can execute, faster.
+
+USEFUL HEADERS:
+📥 Giriş ve Çıkış (Input / Output) Operations
+Ekrandan veri alma, ekrana yazdırma ve dosya işlemlerini yönetir.
+#include <iostream>: Konsola yazdırma (cout) ve kullanıcıdan girdi alma (cin) için zorunludur.
+#include <fstream>: Bilgisayardaki dosyalara veri yazmak ve dosyadan veri okumak için kullanılır.
+#include <iomanip>: Çıktıları hizalamak ve biçimlendirmek için (örneğin virgülden sonra kaç basamak gösterileceğini ayarlamak için) kullanılır.
+#include <format>: (C++20) Python benzeri {} süslü parantez sözdizimi ile çok daha hızlı, okunabilir ve modern metin biçimlendirme (string formatting) yapmanızı sağlar.
+
+🗃️ Temel Veri Yapıları ve Konteynerler (Containers)
+Verileri hafızada organize bir şekilde tutmanızı sağlayan dinamik yapılardır.
+#include <string>: Metin (string) değişkenlerini ve metin fonksiyonlarını kullanmak için gerekir.
+#include <vector>: Boyutu dinamik olarak değişebilen akıllı diziler (dinamik array) oluşturmanızı sağlar. En sık kullanılan yapıdır.
+#include <list>: Çift yönlü bağlı liste (doubly linked list) yapısını sağlar.
+#include <map>: Anahtar-değer (Key-Value) ilişkisiyle çalışan sözlük yapıları kurmanızı sağlar.
+#include <set>: İçinde sadece benzersiz (tekrarlanmayan) elemanlar barındıran kümeler oluşturur.
+
+⚙️ Algoritmalar ve Matematik
+Hazır fonksiyonlarla işinizi kolaylaştıran kütüphanelerdir.
+#include <algorithm>: Sıralama (sort), arama (binary_search), tersine çevirme (reverse), en büyük/küçük elemanı bulma (max, min) ve sizin yapmaya çalıştığınız swap gibi onlarca hazır algoritmayı barındırır.
+#include <cmath>: Üs alma (pow), karekök (sqrt), mutlak değer (abs) ve trigonometrik fonksiyonları içerir.
+
+🕒 Zaman ve Diğer Yardımcılar
+Programın çalışma süresini ölçmek veya modern C++ özelliklerini kullanmak için gereklidir.
+#include <chrono>: Kodun ne kadar sürede çalıştığını mikrosaniye veya milisaniye cinsinden ölçmek için kullanılır.
+#include <memory>: Bellek sızıntılarını (memory leak) önleyen akıllı işaretçileri (unique_ptr, shared_ptr) kullanmanızı sağlar.
